@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+exec java -jar /TaskRunner.jar \
+  --accessId=${AWS_ACCESS_KEY_ID} \
+  --secretKey=${AWS_SECRET_ACCESS_KEY} \
+  --region=${TASKRUNNER_REGION} \
+  --logUri=${TASKRUNNER_LOG_URI} \
+  --workerGroup=${TASKRUNNER_WORKERGROUP}
+
